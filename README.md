@@ -1,18 +1,33 @@
-## Getting Started
+## Java orientacao a obejto
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+### Aprendendo a puxa variaveis de outra classes
 
-## Folder Structure
+<p>classe e um arquetipo tipo um modelo e o objeto sao varios Filme=class </p>
 
-The workspace contains two folders by default, where:
+<p>nesse trecho do codigo vamos estamos puchando as variaveis do Arquivo Filme </p>
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+```java
+public class Principal {
+    public static void main(String[] args){
+        Filme meuFilme = new Filme();//tipo referencia (caracteristica de atributo)
+        ///a parte da direita esta criando e a da esquerda ta puxando
+meuFilme.nome = "homem aranha";
+System.out.println(meuFilme);
+    }
+}
+```
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+<p>Ao voce da run no codigo ira aparece no seu terminal um trexo escrito "Filme@4617c264" no caso se referindo a classe principal que e Filme e os numeros o endereço</p>
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+<p>Para puxa a aplicao no caso a variavel de Filmes com o nome que voce deu precisa coloca assim:</p>
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```java
+public class Principal {
+    public static void main(String[] args){
+        Filme meuFilme = new Filme();//tipo referencia (caracteristica de atributo)
+        ///a parte da direita esta criando e a da esquerda ta puxando
+meuFilme.nome = "homem aranha";
+System.out.println(meuFilme.nome);//instanciando objetos
+    }
+}
+```
