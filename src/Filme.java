@@ -1,17 +1,27 @@
+//Obejetos
+
 public class Filme{
-public static void main(String[] args) {
      String nome;
     int anoDeLancamento;
     boolean incluidoNoPlano;
-    double avaliacao;
+    double somaDaAvaliacoes;
     int totalDeAvaliacoes;
     int duracaoEmMinutos;
-}
 
-public Object nome;
-public int anoDeLancamento;
-public String nomeincluidoNoPlano;
-public int totalDeAvaliacoes;
-public String duracaoEmMinutos;
-public int avaliacao;
+
+    void exibeFichaTecnica(){
+        System.out.println("nome do filme:" + nome);
+        System.out.println("ano de lancamento:" + anoDeLancamento);
+    }
+
+
+    void avalia(double nota){
+        somaDaAvaliacoes += nota;//somando a quantidade de avaliacao    
+        totalDeAvaliacoes ++;//contando quantas avaliacoes teve
+    }
+
+    ///retorno da media
+    double pegaMedia(){
+        return somaDaAvaliacoes/ totalDeAvaliacoes;
+    }
 }
