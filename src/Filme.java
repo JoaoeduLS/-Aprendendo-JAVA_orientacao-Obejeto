@@ -6,12 +6,16 @@ public class Filme{
     boolean incluidoNoPlano;
     double somaDaAvaliacoes;
     int totalDeAvaliacoes;
-    int duracaoEmMinutos;
+    String nomeincluidoNoPlano;
+    String duracaoEmMinutos;
 
 
     void exibeFichaTecnica(){
         System.out.println("nome do filme:" + nome);
         System.out.println("ano de lancamento:" + anoDeLancamento);
+        System.out.println( "o filme tem duracao de:" + duracaoEmMinutos);
+        System.out.println("voce possui o plano:" + nomeincluidoNoPlano);
+
     }
 
 
