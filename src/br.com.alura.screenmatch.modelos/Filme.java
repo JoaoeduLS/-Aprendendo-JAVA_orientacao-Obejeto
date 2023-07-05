@@ -1,77 +1,64 @@
-package br.com.alura.screematch.modelos.Filme;
+package br.com.alura.screenmatch.modelos;
 
-public class Filme{
+public class Filme {
+
     private String nome;
     private int anoDeLancamento;
-    private  boolean incluidoNoPlano;
-    private double somaDaAvaliacoes;
-    private int totalDeAvaliacoes;
-    private String nomeincluidoNoPlano;
     private int duracaoEmMinutos;
+    private boolean incluidoNoPlano;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
 
-    /*Private para esconder algumas variaveis e transfotma em get */
+    public void exibeFichaTecnica() {
+        System.out.println("Nome do filme: " +nome);
+        System.out.println("Ano de lançamento: " +anoDeLancamento);
+        System.out.println("Duração em minutos: " +duracaoEmMinutos);
+        System.out.println("Incluído no plano: " +incluidoNoPlano);
+    }
 
+    public void avalia(double nota) {
+        somaDasAvaliacoes += nota;
+        totalDeAvaliacoes++;
+    }
+
+    public double pegaMedia() {
+        return somaDasAvaliacoes / totalDeAvaliacoes;
+    }
 
     public String getNome() {
-        return nome;
-    }
-
-    public int getAnoDeLancamento() {
-        return anoDeLancamento;
-    }
-
-    public boolean isIncluidoNoPlano() {
-        return incluidoNoPlano;
-    }
-
-    public int getDuracaoEmMinutos() {
-        return duracaoEmMinutos;
-    }
-
-    public String getNomeincluidoNoPlano() {
-        return nomeincluidoNoPlano;
-    }
-
-    public int gettotalDeAvaliacoes(){
-        return totalDeAvaliacoes;
+        return this.nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    public int getAnoDeLancamento() {
+        return this.anoDeLancamento;
+    }
+
     public void setAnoDeLancamento(int anoDeLancamento) {
         this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public boolean getIncluidoNoPlano() {
+        return this.incluidoNoPlano;
     }
 
     public void setIncluidoNoPlano(boolean incluidoNoPlano) {
         this.incluidoNoPlano = incluidoNoPlano;
     }
 
+    public int getDuracaoEmMinutos() {
+        return this.duracaoEmMinutos;
+    }
+
     public void setDuracaoEmMinutos(int duracaoEmMinutos) {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
-    public void setNomeincluidoNoPlano(String nomeincluidoNoPlano) {
-        this.nomeincluidoNoPlano = nomeincluidoNoPlano;
+    public int getTotalDeAvaliacoes() {
+        return this.totalDeAvaliacoes;
     }
 
-    public void exibeFichaTecnica(){
-        System.out.println("nome do filme:" + nome);
-        System.out.println("ano de lancamento:" + anoDeLancamento);
-        System.out.println( "o filme tem duracao de:" + duracaoEmMinutos + "horas");
-        System.out.println("voce possui o plano:" + nomeincluidoNoPlano);
-
-    }
-
-
-    public void avalia(double nota){
-        somaDaAvaliacoes += nota;//somando a quantidade de avaliacao
-        totalDeAvaliacoes ++;//contando quantas avaliacoes teve
-    }
-
-    ///retorno da media
-    public double pegaMedia(){
-        return somaDaAvaliacoes/ totalDeAvaliacoes;
-    }
 }

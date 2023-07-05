@@ -1,24 +1,21 @@
-import br.com.alura.screematch.modelos.Filme.Filme;
+import br.com.alura.screenmatch.modelos.Filme;
 
 public class Principal {
-    public static void main(String[] args){
-        Filme meuFilme = new Filme();//tipo referencia (caracteristica de atributo)
-        ///a parte da direita esta criando e a da esquerda ta puxando
 
-        meuFilme.setNome("homem aranha");
-        meuFilme.setAnoDeLancamento(2009);
-        meuFilme.setNomeincluidoNoPlano( "master");
-        meuFilme.setDuracaoEmMinutos(2);
+    public static void main(String[] args) {
+        Filme favorito = new Filme();
 
+        favorito.setNome("The Matrix");
+        favorito.setAnoDeLancamento(1999);
+        favorito.setDuracaoEmMinutos(135);
+        favorito.setIncluidoNoPlano(true);
 
-        meuFilme.exibeFichaTecnica();
-        meuFilme.avalia(8);
-        meuFilme.avalia(5);
-        meuFilme.avalia(10);
+        favorito.exibeFichaTecnica();
+        favorito.avalia(9);
+        favorito.avalia(8);
+        favorito.avalia(9);
 
-
-        System.out.println("total de avaliacao do filme: "+meuFilme.gettotalDeAvaliacoes());
-        System.out.println("media do filme: "+meuFilme.pegaMedia());
-
+        System.out.println("Média de avaliações do filme: " +favorito.pegaMedia());
     }
+
 }
