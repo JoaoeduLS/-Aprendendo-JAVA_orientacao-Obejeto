@@ -6,7 +6,7 @@ public class Filme{
     private  boolean incluidoNoPlano;
     private double somaDaAvaliacoes;
     private int totalDeAvaliacoes;
-    String nomeincluidoNoPlano;
+    private String nomeincluidoNoPlano;
     private int duracaoEmMinutos;
 
     /*Private para esconder algumas variaveis e transfotma em get */
