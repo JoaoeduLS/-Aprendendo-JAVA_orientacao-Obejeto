@@ -4,24 +4,37 @@ import br.com.alura.screenmatch.modelos.Serie;
 public class Principal {
 
     public static void main(String[] args) {
-        Filme favorito = new Filme();
+        Filme meuFilme = new Filme();
 
-        favorito.setNome("The Matrix");
-        favorito.setAnoDeLancamento(1999);
-        favorito.setDuracaoEmMinutos(135);
-        favorito.setIncluidoNoPlano(true);
+        meuFilme.setNome("The Matrix");
+        meuFilme.setAnoDeLancamento(1999);
+        meuFilme.setDuracaoEmMinutos(135);
+        meuFilme.setIncluidoNoPlano(true);
+        meuFilme.setDuracaoEmMinutos(180);
 
-        favorito.exibeFichaTecnica();
-        favorito.avalia(9);
-        favorito.avalia(8);
-        favorito.avalia(9);
+                System.out.println("Duracao do filme:"+meuFilme.getDuracaoEmMinutos());
 
-        System.out.println("Média de avaliações do filme: " +favorito.pegaMedia());
+
+       /*
+
+        meuFilme.exibeFichaTecnica();
+        meuFilme.avalia(9);
+        meuFilme.avalia(8);
+        meuFilme.avalia(9);
+
+        */
+                System.out.println("Média de avaliações do filme: " +meuFilme.pegaMedia());
 
         Serie lost=new Serie();
         lost.setNome("lost");
         lost.setAnoDeLancamento(2000);
         lost.exibeFichaTecnica();
+        lost.setTemporadas(10);
+        lost.setEpisodiosPorTemporada(12);
+        lost.setMinutosPorEpisodio(50);
+
+                System.out.println("Duracao para maratona lost:"+lost.getDuracaoEmMinutos());
+
     }
 
 }
