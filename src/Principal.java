@@ -1,5 +1,6 @@
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
+import br.com.alura.sreenmatch.calculo.CalculadoraDeTempo;
 
 public class Principal {
 
@@ -34,6 +35,20 @@ public class Principal {
         lost.setMinutosPorEpisodio(50);
 
                 System.out.println("Duracao para maratona lost:"+lost.getDuracaoEmMinutos());
+
+
+        Filme outroFilme = new Filme();
+
+        outroFilme.setNome("The Flash");
+        outroFilme.setAnoDeLancamento(2023);
+        outroFilme.setDuracaoEmMinutos(180);
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(lost);
+        System.out.println(calculadora.getTempoTotal());
 
     }
 
